@@ -1,3 +1,8 @@
+<h1 align="center">
+  Smantore
+</h1>
+<p align="center">New Arrivals | Enjoy This Summer Trends | On Eligible Items in order of $100 or more</p>
+<br /><br />
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
