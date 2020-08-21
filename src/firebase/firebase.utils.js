@@ -18,12 +18,14 @@ firebase.initializeApp(config);
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
 
-  const userRef = firestore.doc(`users/${userAuth.uid}`);
+  // If we use Document Object method, we can perform CRUD(create, retrieve, update, delete) methods in the Database
+  const userRef = firestore.doc(`users/${userAuth.uid}`); // {id:"..."//firebase userID, path:'...'}
 
-  const snapShot = await userRef.get();
+  //documentSnapshot Object allow us to check if document exist at this quary using the .exists property witch returns a boolean
+  const snapShot = await userRef.get(); // DocumentSnapshot{ exists: true/false, id=".."//firebase UserID or url... }
 
   if (!snapShot.exists) {
-    const { displayName, email } = userAuth;
+    const { displayName, email } = userAuth; // get data from firebase auth. p{...}
     const createdAt = new Date();
 
     try {

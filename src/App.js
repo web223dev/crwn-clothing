@@ -26,7 +26,7 @@ class App extends Component {
         userRef.onSnapshot((snapShot) => {
           setCurrentUser({
             id: snapShot.id,
-            ...snapShot.data(),
+            ...snapShot.data(), // we can get actual properties on the object by calling .data() method which returns us a JSON object of the document.
           });
         });
       }
