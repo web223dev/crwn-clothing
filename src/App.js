@@ -16,6 +16,7 @@ import "./App.css";
 
 class App extends Component {
   unsubscribeFromAuth = null;
+
   componentDidMount() {
     // this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
     //   if (userAuth) {
